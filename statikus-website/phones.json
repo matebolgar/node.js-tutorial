@@ -1,8 +1,0 @@
-[
-  { "brand": "Google", "name": "Pixel 3a" },
-  { "brand": "Samsung", "name": "Galaxy S10e" },
-  { "brand": "ZTE", "name": "Blade 10 Prime" },
-  { "brand": "Apple", "name": "iPhone 11 Pro" },
-  { "brand": "Samsung", "name": "Galaxy Note 10+" },
-  { "name": "teszt", "brand": "teszt" }
-]
