@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Rick Sanchez",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Morty Smith",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Summer Smith",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Beth Smith",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Jerry Smith",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Abadango Cluster Princess",
+    "species": "Alien",
+    "type": ""
+  },
+  {
+    "name": "Abradolf Lincler",
+    "species": "Human",
+    "type": "Genetic experiment"
+  },
+  {
+    "name": "Adjudicator Rick",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Agency Director",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Alan Rails",
+    "species": "Human",
+    "type": "Superhuman (Ghost trains summoner)"
+  },
+  {
+    "name": "Albert Einstein",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Alexander",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Alien Googah",
+    "species": "Alien",
+    "type": ""
+  },
+  {
+    "name": "Alien Morty",
+    "species": "Alien",
+    "type": ""
+  },
+  {
+    "name": "Alien Rick",
+    "species": "Alien",
+    "type": ""
+  },
+  {
+    "name": "Amish Cyborg",
+    "species": "Alien",
+    "type": "Parasite, Cyborg"
+  },
+  {
+    "name": "Annie",
+    "species": "Human",
+    "type": ""
+  },
+  {
+    "name": "Antenna Morty",
+    "species": "Human",
+    "type": "Human with antennae"
+  },
+  {
+    "name": "Antenna Rick",
+    "species": "Human",
+    "type": "Human with antennae"
+  },
+  {
+    "name": "Ants in my Eyes Johnson",
+    "species": "Human",
+    "type": "Human with ants in his eyes"
+  }
+]
