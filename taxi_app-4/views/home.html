@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Taxi app</h1>
+
+      <div class="row">
+        <div class="col-sm-6 border-right">
+          <h3>Cars:</h3>
+          <div id="car-list-component"></div>
+          <h3>Új kocsi:</h3>
+          <form id="create-car-component">
+            <label class="w-100">
+              Név:
+              <input type="text" name="name" class="form-control" />
+            </label>
+            <label class="w-100">
+              Rendszám:
+              <input type="text" name="licenseNumber" class="form-control" />
+            </label>
+            <label class="w-100">
+              Óradíj:
+              <input type="number" name="hourlyRate" class="form-control" />
+            </label>
+            <button class="btn btn-outline-primary">Mentés</button>
+          </form>
+        </div>
+        <div class="col-6">
+          <div id="trip-list-component"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

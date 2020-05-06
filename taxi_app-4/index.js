@@ -22,15 +22,29 @@ const ObjectId = require("mongodb").ObjectID;
 function getClient() {
   const MongoClient = require("mongodb").MongoClient;
   const uri =
-    "mongodb+srv://testUser:vMtHvtxD9YnEf5eo@cluster0-htgzm.mongodb.net/test?retryWrites=true&w=majority";
+    "mongodb+srv://testUser:QdCRKLNwvTfuKr07@cluster0-htgzm.mongodb.net/test?retryWrites=true&w=majority";
   return new MongoClient(uri, { useNewUrlParser: true });
 }
 
+const path = require('path');
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'views', 'home.html'));
+});
+
+app.use(express.static('public'));
+
 app.get("/cars", function (req, res) {
+  
   const client = getClient();
   client.connect(async (err) => {
     const collection = client.db("taxi_app").collection("cars");
-    const cars = await collection.find().toArray();
+    // licenseNumber === 'DFG-345'
+    const cars = await collection
+    .find()
+    .limit(3)
+    .sort({hourlyRate: 1})
+    .toArray();
     res.send(cars);
     client.close();
   });
