@@ -39,11 +39,8 @@ app.get("/cars", function (req, res) {
   const client = getClient();
   client.connect(async (err) => {
     const collection = client.db("taxi_app").collection("cars");
-    // licenseNumber === 'DFG-345'
     const cars = await collection
     .find()
-    .limit(3)
-    .sort({hourlyRate: 1})
     .toArray();
     res.send(cars);
     client.close();
