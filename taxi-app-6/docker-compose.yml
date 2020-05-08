@@ -1,0 +1,50 @@
+version: "3"
+services:
+  nodejs_tutorial:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - "./server/src:/usr/src/app"
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    networks:
+      - tutorial_net
+  mysql_host:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'test_db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3308:3306'
+    networks:
+      - tutorial_net
+    expose:
+      - '3308'
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql_host
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    restart: always
+    ports:
+      - 8181:80
+    networks:
+      - tutorial_net
+    volumes:
+      - /sessions
+networks:
+  tutorial_net:
+    driver: bridge
+
+
